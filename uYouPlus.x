@@ -10,7 +10,7 @@
 %end
 
 
-// YouRememberCaption: https://www.ios-repo-updates.com/repository/poomsmart/package/com.ps.youremembercaption/
+// YouRememberCaption: https://poomsmart.github.io/repo/depictions/youremembercaption.html
 
 %hook YTColdConfig
 - (BOOL)respectDeviceCaptionSetting {
@@ -57,28 +57,34 @@
 @property BOOL on;
 @property BOOL (^switchBlock)(YTSettingsCell *, BOOL);
 @property int settingItemId;
++ (instancetype)switchItemWithTitle:(NSString *)title titleDescription:(NSString *)titleDescription accessibilityIdentifier:(NSString *)accessibilityIdentifier switchOn:(BOOL)switchOn switchBlock:(BOOL (^)(YTSettingsCell *, BOOL))switchBlock settingItemId:(int)settingItemId;
 - (instancetype)initWithTitle:(NSString *)title titleDescription:(NSString *)titleDescription;
 @end
 
 %hook YTSettingsViewController
 - (void)setSectionItems:(NSMutableArray <YTSettingsSectionItem *>*)sectionItems forCategory:(NSInteger)category title:(NSString *)title titleDescription:(NSString *)titleDescription headerHidden:(BOOL)headerHidden {
 	if (category == 1) {
-		NSInteger appropriateIdx = [sectionItems indexOfObjectPassingTest:^BOOL(YTSettingsSectionItem *item, NSUInteger idx, BOOL *stop) {
-			return item.settingItemId == 294;
-		}];
-		if (appropriateIdx != NSNotFound) {
-			YTSettingsSectionItem *hoverCardItem = [[%c(YTSettingsSectionItem) alloc] initWithTitle:@"Show End screens hover cards" titleDescription:@"Allows creator End screens (thumbnails) to appear at the end of videos"];
-			hoverCardItem.hasSwitch = YES;
-			hoverCardItem.switchVisible = YES;
-			hoverCardItem.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"hover_cards_enabled"];
-			hoverCardItem.switchBlock = ^BOOL (YTSettingsCell *cell, BOOL enabled) {
-				[[NSUserDefaults standardUserDefaults] setBool:enabled forKey:@"hover_cards_enabled"];
-				return YES;
-			};
-			[sectionItems insertObject:hoverCardItem atIndex:appropriateIdx + 1];
+        NSUInteger defaultPiPIndex = [sectionItems indexOfObjectPassingTest:^BOOL (YTSettingsSectionItem *item, NSUInteger idx, BOOL *stop) {
+            return item.settingItemId == 366;
+        }];
+        if (defaultPiPIndex == NSNotFound) {
+            defaultPiPIndex = [sectionItems indexOfObjectPassingTest:^BOOL (YTSettingsSectionItem *item, NSUInteger idx, BOOL *stop) {
+                return [[item valueForKey:@"_accessibilityIdentifier"] isEqualToString:@"id.settings.restricted_mode.switch"];
+            }];
+        }
+        if (defaultPiPIndex != NSNotFound) {
+            YTSettingsSectionItem *hoverCardItem = [%c(YTSettingsSectionItem) switchItemWithTitle:@"Show End screens hover cards" titleDescription:@"Allows creator End screens (thumbnails) to appear at the end of videos"
+            accessibilityIdentifier:nil
+            switchOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"hover_cards_enabled"]
+            switchBlock:^BOOL (YTSettingsCell *cell, BOOL enabled) {
+                [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:@"hover_cards_enabled"];
+                return YES;
+            }
+            settingItemId:0];
+			[sectionItems insertObject:hoverCardItem atIndex:defaultPiPIndex + 1];
 		}
 	}
-	%orig;
+    %orig(sectionItems, category, title, titleDescription, headerHidden);
 }
 %end
 

@@ -4,3 +4,5 @@ packages
 obj
 Tweaks/uYou/*
 !Tweaks/uYou/.gitkeep
+Tweaks/uYouImport/*
+!Tweaks/uYouImport/.gitkeep
