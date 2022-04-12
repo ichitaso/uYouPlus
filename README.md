@@ -15,6 +15,8 @@
 
 # Credits
 
+- [qnblackcat](https://twitter.com/t70438299) for [uYouPlus](https://github.com/qnblackcat/uYouPlus).
+
 - [MiRO92](https://twitter.com/miro92) for [uYou](https://github.com/MiRO92/uYou-for-YouTube).
 
 - [Galactic-Dev](https://github.com/Galactic-Dev) and [Luewii](https://github.com/Luewii) for [iSponsorBlock](https://github.com/Galactic-Dev/iSponsorBlock).
