@@ -38,22 +38,26 @@
 
 1. **uYou:** uYou has a ton of features that I can't list them all. Visit [here](https://miro92.com/repo/depictions/?p=com.miro.uyou) for more info!
 
-2. **YouPiP:** enable YouTube's **native PiP**. More options are in YouTube Settings - General.
+2. **iSponsorBlock:** Skips annoying sponsor ads inside videos. iSponsorBlock is based on [SponsorBlock engine](https://sponsor.ajay.app/). Basically, this is the iOS version of the SponsorBlock extension.
 
-3. **YTUHD:** unlock VP9 codec and in effect, enables video quality of 2K and 4K. You can enable/disable YTUHD in YouTube Settings - Video quality preferences.
+3. **YouPiP:** enable YouTube's **native PiP**. More options are in YouTube Settings - General.
+
+4. **YTUHD:** unlock VP9 codec and in effect, enables video quality of 2K and 4K. You can enable/disable YTUHD in YouTube Settings - Video quality preferences.
 
 <details>
   <summary>And more...!</summary>
 
-4. **YTClassicVideoQuality:** since YouTube v16.xx, you need one more step to change the video quality. YTClassicVideoQuality brings back the old video quality selector, which is a lot better than the new one.
+5. **YTClassicVideoQuality:** since YouTube v16.xx, you need one more step to change the video quality. YTClassicVideoQuality brings back the old video quality selector, which is a lot better than the new one.
 
-5. **YTNoHoverCards:** offer an option to enable/disable the annoying suggested videos show up at the end of the videos.
+6. **YTNoHoverCards:** offer an option to enable/disable the annoying suggested videos show up at the end of the videos.
 
-6. **YTSystemAppearance**: sync the YouTube theme (dark/light) with the system theme.
+7. **YTSystemAppearance**: sync the YouTube theme (dark/light) with the system theme.
 
-7. **YTNoCheckLocalNetwork**: block the Local Network permission popup.
+8. **YTNoCheckLocalNetwork**: block the Local Network permission popup.
 
-8. **YouRememberCaption**: make YouTube remember your video caption setting (if not already).
+9. **YouRememberCaption**: make YouTube remember your video caption setting (if not already).
+
+10. **YTSpeed**: Simple playback speed tweak for the YouTube App on jailbroken iOS/iPadOS devices.
 </details>
 
 # Known issues 
@@ -80,7 +84,7 @@
 
 | **Tweaks/App** | **Version** | **Open source** |
 | :------------: | :----------:| :-------------: |
-| **YouTube** | 17.12.5 | ✖︎  |
+| **YouTube** | 17.14.2 | ✖︎  |
 | **uYou** | 2.1 | ✖︎ |
 | **Return YouTube Dislike** | 1.6.4 | [✔︎](https://github.com/PoomSmart/Return-YouTube-Dislikes) |
 | **iSponsorBlock** | 1.0-14 | [✔︎](https://github.com/Galactic-Dev/iSponsorBlock) |

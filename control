@@ -1,7 +1,7 @@
 Package: com.ichitaso.uyouplus
 Name: uYouPlus
-Depends: mobilesubstrate, firmware (>=13.0), firmware (>= 14.0) | gsc.ipad | com.ps.forceinpicture | com.cabralcole.forceinpicture
-Conflicts: com.miro.uyou, com.miro.uyouimport, com.miro.easyyt, com.miro.ytnoshorts, com.ps.noytpremium, com.ps.youarethere, weeb.lillie.youtubedislikesreturn, com.ps.youpip, com.ps.ytuhd, com.ps.youremembercaption, com.ps.ytclassicvideoquality, com.ps.ytnochecklocalnetwork, com.level3tjg.ytnohovercards, com.ps.ytsystemappearance
+Depends: mobilesubstrate, ws.hbang.alderis (>= 1.1.2), firmware (>=13.0), firmware (>= 14.0) | gsc.ipad | com.ps.forceinpicture | com.cabralcole.forceinpicture
+Conflicts: com.miro.uyou, com.miro.uyouimport, com.miro.easyyt, com.miro.ytnoshorts, com.ps.noytpremium, com.ps.youarethere, weeb.lillie.youtubedislikesreturn, com.ps.youpip, com.ps.ytuhd, com.ps.youremembercaption, com.ps.ytclassicvideoquality, com.ps.ytnochecklocalnetwork, com.level3tjg.ytnohovercards, com.ps.ytsystemappearance, com.galacticdev.isponsorblock, com.lyvendia.ytspeed
 Replaces: com.ichitaso.uyouplus
 Depiction: https://cydia.ichitaso.com/depiction/uyouplus.html
 Description: The best tweak for the YouTube app
@@ -10,5 +10,5 @@ Maintainer: ichitaso
 Author: ichitaso
 Section: Tweaks
 Tag: purpose::extension, compatible_min::ios13, compatible_max::ios14
-Icon: file:////Library/Application Support/uYouBundle.bundle/icon_clipped.png
-Version: 1.0.0
+Icon: https://raw.githubusercontent.com/ichitaso/uYouPlus-for-JB/main/layout/Library/Application%20Support/uYouBundle.bundle/icon_clipped.png
+Version: 1.0.1

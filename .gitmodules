@@ -1,7 +1,3 @@
-[submodule "Tweaks/iSponsorBlock"]
-	path = Tweaks/iSponsorBlock
-	url = https://github.com/qnblackcat/iSponsorBlock.git
-	branch = master
 [submodule "Tweaks/YTUHD"]
 	path = Tweaks/YTUHD
 	url = https://github.com/PoomSmart/YTUHD.git
@@ -26,3 +22,9 @@
 	path = Tweaks/PSHeader
 	url = https://github.com/PoomSmart/PSHeader.git
 	branch = master
+[submodule "Tweaks/iSponsorBlock"]
+	path = Tweaks/iSponsorBlock
+	url = https://github.com/qnblackcat/iSponsorBlock.git
+[submodule "Tweaks/YTSpeed"]
+	path = Tweaks/YTSpeed
+	url = https://github.com/qnblackcat/YTSpeed.git

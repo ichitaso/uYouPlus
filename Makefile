@@ -12,7 +12,7 @@ TWEAK_NAME = uYouPlus
 uYouPlus_FILES = uYouPlus.x
 uYouPlus_CFLAGS = -fobjc-arc
 
-SUBPROJECTS += Tweaks/YTUHD Tweaks/YouPiP Tweaks/Return-YouTube-Dislikes
+SUBPROJECTS += Tweaks/iSponsorBlock Tweaks/YTSpeed Tweaks/YTUHD Tweaks/YouPiP Tweaks/Return-YouTube-Dislikes
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
