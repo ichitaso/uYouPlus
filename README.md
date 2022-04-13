@@ -31,6 +31,8 @@
 
 - [Al4ise](https://github.com/Al4ise) for [Azule](https://github.com/Al4ise/Azule), a tool used to inject jailbreak tweaks into jailed iOS apps.
 
+- [Lyvendia](https://github.com/Lyvendia) for [YTSpeed](https://github.com/Lyvendia/YTSpeed), add 0.25 to 4x playback speed.
+
 - [theos team](https://github.com/theos/theos) for theos & theos-jailed.
 
 
@@ -139,4 +141,5 @@ See [FAQ - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/FAQ).
 
 # Building (optional)
 
-```make package```
+```git clone --recursive https://github.com/ichitaso/uYouPlus-for-JB.git
+make package```
