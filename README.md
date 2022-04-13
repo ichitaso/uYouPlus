@@ -142,6 +142,6 @@ See [FAQ - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/FAQ).
 # Building (optional)
 
 ```
-git clone --recursive https://github.com/ichitaso/uYouPlus-for-JB.git  
+git clone --recursive https://github.com/ichitaso/uYouPlus-for-JB.git
 make package
 ```
