@@ -140,12 +140,11 @@ Repo: https://cydia.ichitaso.com
 See [FAQ - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/FAQ).
 
 # Building (optional)
-
-	```
-	git clone --recursive https://github.com/ichitaso/uYouPlus-for-JB.git
-	cd uYouPlus-for-JB
-	make package
-	```
+```
+git clone --recursive https://github.com/ichitaso/uYouPlus-for-JB.git
+cd uYouPlus-for-JB
+make package
+```
 ## Contact Me
 
 * Twitter: [@ichitaso](https://twitter.com/ichitaso)
