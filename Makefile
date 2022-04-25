@@ -5,7 +5,7 @@ FINALPACKAGE = 1
 ARCHS = arm64
 TARGET = iphone:clang:latest:13.0
 
-THEOS_DEVICE_IP = 192.168.0.16
+THEOS_DEVICE_IP = 0.0.0.0 -p 2222
 
 TWEAK_NAME = uYouPlus
 uYouPlus_FILES = uYouPlus.xm
