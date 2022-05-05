@@ -64,15 +64,10 @@
 %hook YTSettingsViewController
 - (void)setSectionItems:(NSMutableArray <YTSettingsSectionItem *>*)sectionItems forCategory:(NSInteger)category title:(NSString *)title titleDescription:(NSString *)titleDescription headerHidden:(BOOL)headerHidden {
 	if (category == 1) {
-        NSUInteger defaultPiPIndex = [sectionItems indexOfObjectPassingTest:^BOOL (YTSettingsSectionItem *item, NSUInteger idx, BOOL *stop) {
-            return item.settingItemId == 294;
+        NSUInteger appropriateIdx = [sectionItems indexOfObjectPassingTest:^BOOL (YTSettingsSectionItem *item, NSUInteger idx, BOOL *stop) {
+            return item.settingItemId == 265;
         }];
-        if (defaultPiPIndex == NSNotFound) {
-            defaultPiPIndex = [sectionItems indexOfObjectPassingTest:^BOOL (YTSettingsSectionItem *item, NSUInteger idx, BOOL *stop) {
-                return [[item valueForKey:@"_accessibilityIdentifier"] isEqualToString:@"id.settings.restricted_mode.switch"];
-            }];
-        }
-        if (defaultPiPIndex != NSNotFound) {
+        if (appropriateIdx != NSNotFound) {
             YTSettingsSectionItem *hoverCardItem = [%c(YTSettingsSectionItem) switchItemWithTitle:@"Show End screens hover cards" titleDescription:@"Allows creator End screens (thumbnails) to appear at the end of videos"
             accessibilityIdentifier:nil
             switchOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"hover_cards_enabled"]
@@ -81,7 +76,7 @@
                 return YES;
             }
             settingItemId:0];
-			[sectionItems insertObject:hoverCardItem atIndex:defaultPiPIndex + 1];
+			[sectionItems insertObject:hoverCardItem atIndex:appropriateIdx + 1];
 		}
 	}
     %orig(sectionItems, category, title, titleDescription, headerHidden);
